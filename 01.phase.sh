@@ -41,3 +41,7 @@ while read -r scaffold; do
     rm "tmp_${scaffold}.vcf.gz" "tmp_phased_${scaffold}.vcf.gz" "tmp_phased_${scaffold}.log"
 
 done < "$SCAFFOLDS"
+
+# Clean up
+mkdir -p locs
+mv *.log mv *.locs mv *.sites ./locs
