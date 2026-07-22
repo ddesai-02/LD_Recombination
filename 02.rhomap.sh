@@ -15,7 +15,7 @@ echo "Starting rhomap MCMC on scaffold: $SCAFFOLD"
 
 # 2. Run rhomap with standard MCMC parameters
 /home/devan/software/LDhat/rhomap -seq "WH_ld_${SCAFFOLD}.ldhat.sites" \
-         -loc "WH_ld_${SCAFFOLD}.ldhat.locs" \
+         -loc "./locs/${SCAFFOLD}.ldhat.locs" \
          -lk "$LOOKUP_TABLE" \
          -its 10000000 \
          -samp 2000 \
