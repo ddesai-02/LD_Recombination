@@ -35,7 +35,7 @@ while read -r scaffold; do
 
     # 3. Pass the phased single-scaffold VCF directly to VCFtools
     echo "Exporting to LDhat format..."
-    vcftools --gzvcf "tmp_phased_${scaffold}.vcf.gz" --chr "$scaffold" --ldhat --out "WH_ld_${scaffold}"
+    vcftools --gzvcf "tmp_phased_${scaffold}.vcf.gz" --chr "$scaffold" --ldhat --out "${scaffold}"
 
     # 4. Clean up intermediate single-scaffold files
     rm "tmp_${scaffold}.vcf.gz" "tmp_phased_${scaffold}.vcf.gz" "tmp_phased_${scaffold}.log"
